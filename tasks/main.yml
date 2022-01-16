@@ -1,0 +1,5 @@
+---
+- include: powertools.yml
+  when:
+    - ansible_distribution in [ "CentOS", "EL", "Rocky", "AlmaLinux" ]
+    - ansible_distribution_major_version >= "8"

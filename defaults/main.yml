@@ -1,0 +1,13 @@
+---
+repository_powertools_repo_file:
+  EL:
+    "7": "CentOS-Linux-PowerTools.repo"
+    "8": "CentOS-Stream-PowerTools.repo"
+  CentOS:
+    "7": "CentOS-Linux-PowerTools.repo"
+    "8": "CentOS-Stream-PowerTools.repo"
+    "9": "CentOS-Stream-PowerTools.repo"
+  Rocky:
+    "8": "CentOS-Stream-PowerTools.repo"
+  AlmaLinux:
+    "8": "CentOS-Stream-PowerTools.repo"

@@ -17,21 +17,15 @@ galaxy_info:
     - name: EL
       versions:
         - 8
-    - name: Rocky
-      versions:
-        - 8
-    - name: AlmaLinux
-      versions:
-        - 8
 
-  galaxy_tags: []
+  galaxy_tags:
   #  - cloud
   #  - database
-  #  - development
+    - development
   #  - monitoring
   #  - networking
-  #  - packaging
-  #  - system
+    - packaging
+    - system
   #  - web
 
 dependencies: []

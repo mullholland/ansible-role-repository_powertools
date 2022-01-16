@@ -17,30 +17,11 @@ galaxy_info:
     - name: EL
       versions:
         - 8
-<<<<<<< HEAD
 
   galaxy_tags:
     - development
     - packaging
     - system
-=======
-    - name: Rocky
-      versions:
-        - 8
-    - name: AlmaLinux
-      versions:
-        - 8
-
-  galaxy_tags: []
-  #  - cloud
-  #  - database
-  #  - development
-  #  - monitoring
-  #  - networking
-  #  - packaging
-  #  - system
-  #  - web
->>>>>>> 7d99f9c (Refactor (#1))
 
 dependencies: []
 # List your role dependencies here, one per line. Be sure to remove the '[]' above,

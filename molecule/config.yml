@@ -1,20 +1,24 @@
 ---
 molecule_exceptions:
-  - variation: "ubuntu*"
+  - variation: "Ubuntu*"
     reason: "repo only supports RedHat/CentOS Server"
-  - variation: "debian*"
+  - variation: "Debian*"
     reason: "repo only supports RedHat/CentOS Server"
-  - variation: "fedora*"
+  - variation: "Fedora*"
     reason: "repo only supports RedHat/CentOS Server"
+  - variation: "CentOS7"
+    reason: "repo does not exists on CentOS 7"
+  - variation: "Ubi8"
+    reason: "repo does not exists on Ubi 8"
+  - variation: "centos-stream9"
+    reason: "repo does not exists on CentOS-Stream9"
+  - variation: "Amazonlinux"
+    reason: "repo does not exists on Amazonlinux"
 molecule_scenarios:
   - scenario: "default"
     ansible: ["2.10", "2.11", "2.12"]
     platforms:
-      - "centos7"
       - "centos-stream8"
-      - "centos-stream9"
-      - "ubi8"
-      - "amazonlinux"
       - "rockylinux8"
       - "almalinux8"
 #  - scenario: "alternative"

@@ -13,16 +13,13 @@ These variables are set in `defaults/main.yml`:
 ---
 repository_powertools_repo_file:
   EL:
-    "7": "CentOS-Linux-PowerTools.repo"
     "8": "CentOS-Stream-PowerTools.repo"
   CentOS:
-    "7": "CentOS-Linux-PowerTools.repo"
     "8": "CentOS-Stream-PowerTools.repo"
-    "9": "CentOS-Stream-PowerTools.repo"
   Rocky:
-    "8": "CentOS-Stream-PowerTools.repo"
+    "8": "Rocky-PowerTools.repo"
   AlmaLinux:
-    "8": "CentOS-Stream-PowerTools.repo"
+    "8": "almalinux-powertools.repo"
 ```
 
 
@@ -49,11 +46,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
 This role has been tested on these [container images](https://hub.docker.com/u/mullholland):
 
--   [centos7](https://hub.docker.com/r/mullholland/docker-molecule-centos7)
 -   [centos-stream8](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream8)
--   [centos-stream9](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream9)
--   [ubi8](https://hub.docker.com/r/mullholland/docker-molecule-ubi8)
--   [amazonlinux](https://hub.docker.com/r/mullholland/docker-molecule-amazonlinux)
 -   [rockylinux8](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux8)
 -   [almalinux8](https://hub.docker.com/r/mullholland/docker-molecule-almalinux8)
 
@@ -70,9 +63,13 @@ Some variations of the build matrix do not work. These are the variations and re
 
 | variation                 | reason                 |
 |---------------------------|------------------------|
-| ubuntu* | repo only supports RedHat/CentOS Server |
-| debian* | repo only supports RedHat/CentOS Server |
-| fedora* | repo only supports RedHat/CentOS Server |
+| Ubuntu* | repo only supports RedHat/CentOS Server |
+| Debian* | repo only supports RedHat/CentOS Server |
+| Fedora* | repo only supports RedHat/CentOS Server |
+| CentOS7 | repo does not exists on CentOS 7 |
+| Ubi8 | repo does not exists on Ubi 8 |
+| centos-stream9 | repo does not exists on CentOS-Stream9 |
+| Amazonlinux | repo does not exists on Amazonlinux |
 
 
 If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_powertools/issues)

@@ -17,7 +17,7 @@
 
   tasks:
     - name: SmokeTests
-      debug:
+      ansible.builtin.debug:
         msg:
           - "ansible_version => {{ansible_version}}"
           - "ansible_distribution => {{ ansible_distribution }}"
@@ -26,7 +26,7 @@
           - "ansible_system  => {{ ansible_system }}"
 
     - name: Test if repository exists and is enabled
-      lineinfile:
+      ansible.builtin.lineinfile:
         name: '/etc/yum.repos.d/{{ molecule_repo_file[ansible_distribution][ansible_distribution_major_version] }}'
         line: 'enabled = 1'
         state: present

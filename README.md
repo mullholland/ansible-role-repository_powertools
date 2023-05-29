@@ -1,5 +1,11 @@
 # [repository_powertools](#repository_powertools)
 
+**IMPORTANT**
+This role will no longer be updated. you can use [robertdebock/ansible-role-powertools](https://github.com/robertdebock/ansible-role-powertools) as an alternative.
+
+---
+
+
 |GitHub|GitLab|
 |------|------|
 |[![github](https://github.com/mullholland/ansible-role-repository_powertools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_powertools/actions)|[![gitlab](https://gitlab.com/mullholland/ansible-role-repository_powertools/badges/main/pipeline.svg)](https://gitlab.com/mullholland/ansible-role-repository_powertools)|

@@ -1,37 +1,14 @@
-# [repository_powertools](#repository_powertools)
-
-**IMPORTANT**
-This role will no longer be updated. you can use [robertdebock/ansible-role-powertools](https://github.com/robertdebock/ansible-role-powertools) as an alternative.
-
----
-
-
-|GitHub|GitLab|
-|------|------|
-|[![github](https://github.com/mullholland/ansible-role-repository_powertools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-repository_powertools/actions)|[![gitlab](https://gitlab.com/mullholland/ansible-role-repository_powertools/badges/main/pipeline.svg)](https://gitlab.com/mullholland/ansible-role-repository_powertools)|
+# [Ansible role repository_powertools](#repository_powertools)
 
 description
 
-## [Role Variables](#role-variables)
-
-These variables are set in `defaults/main.yml`:
-```yaml
----
-repository_powertools_repo_file:
-  EL:
-    "8": "CentOS-Stream-PowerTools.repo"
-  CentOS:
-    "8": "CentOS-Stream-PowerTools.repo"
-  Rocky:
-    "8": "Rocky-PowerTools.repo"
-  AlmaLinux:
-    "8": "almalinux-powertools.repo"
-```
-
-
+|GitHub|Downloads|Version|
+|------|---------|-------|
+|[![github](https://github.com/mullholland/ansible-role-repository_powertools/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_powertools/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/mullholland/repository_powertools)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_powertools.svg)](https://github.com/mullholland/ansible-role-repository_powertools/releases/)|
 ## [Example Playbook](#example-playbook)
 
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_powertools/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
 ```yaml
 ---
 - name: Converge
@@ -46,49 +23,55 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
 
 
+## [Role Variables](#role-variables)
 
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/mullholland/ansible-role-repository_powertools/blob/master/defaults/main.yml):
+
+```yaml
+---
+repository_powertools_repo_file:
+  EL:
+    "8": "CentOS-Stream-PowerTools.repo"
+  CentOS:
+    "8": "CentOS-Stream-PowerTools.repo"
+  Rocky:
+    "8": "Rocky-PowerTools.repo"
+  AlmaLinux:
+    "8": "almalinux-powertools.repo"
+```
+
+## [Requirements](#requirements)
+
+- pip packages listed in [requirements.txt](https://github.com/mullholland/ansible-role-repository_powertools/blob/master/requirements.txt).
+
+
+## [Context](#context)
+
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://mullholland.net) for further information.
+
+Here is an overview of related roles:
+![dependencies](https://raw.githubusercontent.com/mullholland/ansible-role-repository_powertools/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
 
 This role has been tested on these [container images](https://hub.docker.com/u/mullholland):
 
--   [centos-stream8](https://hub.docker.com/r/mullholland/docker-molecule-centos-stream8)
--   [rockylinux8](https://hub.docker.com/r/mullholland/docker-molecule-rockylinux8)
--   [almalinux8](https://hub.docker.com/r/mullholland/docker-molecule-almalinux8)
+|container|tags|
+|---------|----|
+|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|8|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
--   The previous versions.
--   The current version.
+- The previous version.
+- The current version.
+- The development version.
 
-
-
-## [Exceptions](#exceptions)
-
-Some variations of the build matrix do not work. These are the variations and reasons why the build won't work:
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| Ubuntu* | repo only supports RedHat/CentOS Server |
-| Debian* | repo only supports RedHat/CentOS Server |
-| Fedora* | repo only supports RedHat/CentOS Server |
-| CentOS7 | repo does not exists on CentOS 7 |
-| Ubi8 | repo does not exists on Ubi 8 |
-| centos-stream9 | repo does not exists on CentOS-Stream9 |
-| Amazonlinux | repo does not exists on Amazonlinux |
-
-
-If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_powertools/issues)
+If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_powertools/issues).
 
 ## [License](#license)
 
-MIT
-
+[MIT](https://github.com/mullholland/ansible-role-repository_powertools/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Mullholland](https://github.com/mullholland)
-
-## [Special Thanks](#special-thanks)
-
-Template inspired by [Robert de Bock](https://github.com/robertdebock)
+[Mullholland](https://mullholland.net)

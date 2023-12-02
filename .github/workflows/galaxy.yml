@@ -6,8 +6,10 @@
 name: Release to Ansible Galaxy
 
 on:
-  release:
-    types: [created, edited, published, released]
+  workflow_run:
+    workflows: [Create a semantic release on push to main]
+    types:
+      - completed
 jobs:
   release:
     runs-on: ubuntu-20.04

@@ -3,13 +3,15 @@
 # Ansible managed
 #
 
-name: Release to Ansible Galaxy
+name: Ansible Galaxy
 
+# Only release to ansible galaxy if semantic release was successful
 on:
   workflow_run:
-    workflows: [Create a semantic release on push to main]
+    workflows: [Semantic release]
     types:
       - completed
+
 jobs:
   release:
     runs-on: ubuntu-20.04

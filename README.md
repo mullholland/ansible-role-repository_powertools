@@ -4,7 +4,7 @@ description
 
 |GitHub|Downloads|Version|
 |------|---------|-------|
-|[![github](https://github.com/mullholland/ansible-role-repository_powertools/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_powertools/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/mullholland/repository_powertools)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_powertools.svg)](https://github.com/mullholland/ansible-role-repository_powertools/releases/)|
+|[![github](https://github.com/mullholland/ansible-role-repository_powertools/actions/workflows/molecule.yml/badge.svg)](https://github.com/mullholland/ansible-role-repository_powertools/actions/workflows/molecule.yml)|[![downloads](https://img.shields.io/ansible/role/d/mullholland/repository_powertools)](https://galaxy.ansible.com/mullholland/repository_powertools)|[![Version](https://img.shields.io/github/release/mullholland/ansible-role-repository_powertools.svg)](https://github.com/mullholland/ansible-role-repository_powertools/releases/)|
 ## [Example Playbook](#example-playbook)
 
 This example is taken from [`molecule/default/converge.yml`](https://github.com/mullholland/ansible-role-repository_powertools/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.

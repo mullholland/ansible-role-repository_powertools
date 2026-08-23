@@ -31,11 +31,23 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "redhat"
+          - image: "rockylinux"
             tag: "8"
-          - image: "redhat"
+          - image: "rockylinux"
             tag: "9"
-          - image: "redhat"
+          - image: "rockylinux"
+            tag: "10"
+          - image: "almalinux"
+            tag: "8"
+          - image: "almalinux"
+            tag: "9"
+          - image: "almalinux"
+            tag: "10"
+          - image: "centos"
+            tag: "8"
+          - image: "centos"
+            tag: "9"
+          - image: "centos"
             tag: "10"
     steps:
       - name: checkout

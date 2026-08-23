@@ -8,8 +8,14 @@ galaxy_info:
   company: none
   min_ansible_version: "2.10"
 
+  # Ansible Galaxy's platform schema has no entry for CentOS specifically
+  # (only the generic "EL" umbrella) - this role's actual CentOS support is
+  # still exercised via molecule, it just cannot be declared here.
   platforms:
-    - name: EL
+    - name: Rocky
+      versions:
+        - all
+    - name: AlmaLinux
       versions:
         - all
   galaxy_tags:

@@ -19,15 +19,21 @@
           - "ansible_os_family  => {{ ansible_facts['os_family'] }}"
           - "ansible_system  => {{ ansible_facts['system'] }}"
 
+    # This role only manages the repository on CentOS/Rocky/AlmaLinux (see
+    # tasks/main.yml). On RedHat/UBI the CodeReady Builder repo uses a
+    # different id (codeready-builder-for-{rhel,ubi}-*) and is typically
+    # already enabled, so there is nothing for this role to verify there.
     - name: "Check repository is enabled: {{ repository_powertools_repo_id[ansible_facts['distribution_major_version']] }}"
       ansible.builtin.command:
         cmd: dnf repolist --enabled
       register: molecule_repository
       changed_when: false
       failed_when: repository_powertools_repo_id[ansible_facts['distribution_major_version']] not in molecule_repository.stdout
+      when: ansible_facts['distribution'] in ["CentOS", "Rocky", "AlmaLinux"]
 
     - name: Check package is installable from repository
       ansible.builtin.dnf:
         name: "libcmocka-devel"
         state: present
       register: package_installed
+      when: ansible_facts['distribution'] in ["CentOS", "Rocky", "AlmaLinux"]

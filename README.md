@@ -50,7 +50,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/m
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
+|[Rocky](https://hub.docker.com/r/mullholland/rockylinux)|all|
+|[AlmaLinux](https://hub.docker.com/r/mullholland/almalinux)|all|
+|[CentOS](https://hub.docker.com/r/mullholland/centos)|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 

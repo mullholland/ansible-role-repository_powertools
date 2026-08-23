@@ -44,8 +44,6 @@ jobs:
           - image: "almalinux"
             tag: "10"
           - image: "centos"
-            tag: "8"
-          - image: "centos"
             tag: "9"
           - image: "centos"
             tag: "10"

@@ -1,8 +1,12 @@
 ---
-- name: powertools | enable powertools
-  community.general.ini_file:
-    path: "/etc/yum.repos.d/{{ repository_powertools_repo_file[ansible_distribution][ansible_distribution_major_version] }}"
-    section: powertools
-    option: enabled
-    value: "1"
-    mode: "0644"
+- name: powertools | Check enabled repositories
+  ansible.builtin.command:
+    cmd: dnf repolist --enabled
+  register: repository_powertools_enabled_repos
+  changed_when: false
+
+- name: "powertools | Enable repository: {{ repository_powertools_repo_id[ansible_facts['distribution_major_version']] }}"
+  ansible.builtin.command:
+    cmd: "dnf config-manager --set-enabled {{ repository_powertools_repo_id[ansible_facts['distribution_major_version']] }}"
+  when: repository_powertools_repo_id[ansible_facts['distribution_major_version']] not in repository_powertools_enabled_repos.stdout
+  changed_when: true

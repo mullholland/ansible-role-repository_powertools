@@ -1,6 +1,6 @@
 # [Ansible role repository_powertools](#repository_powertools)
 
-description
+Enables the PowerTools/CodeReady Builder (CRB) repository on CentOS Stream, Rocky Linux and AlmaLinux
 
 |GitHub|Downloads|Version|
 |------|---------|-------|
@@ -20,22 +20,19 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ```
 
 
-
 ## [Role Variables](#role-variables)
 
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/mullholland/ansible-role-repository_powertools/blob/master/defaults/main.yml):
 
 ```yaml
 ---
-repository_powertools_repo_file:
-  EL:
-    "8": "CentOS-Stream-PowerTools.repo"
-  CentOS:
-    "8": "CentOS-Stream-PowerTools.repo"
-  Rocky:
-    "8": "Rocky-PowerTools.repo"
-  AlmaLinux:
-    "8": "almalinux-powertools.repo"
+# dnf repo id that provides the PowerTools/CodeReady Builder repository,
+# keyed by distribution_major_version. Renamed from "powertools" to "crb"
+# starting with EL9 across CentOS Stream, Rocky Linux and AlmaLinux.
+repository_powertools_repo_id:
+  "8": powertools
+  "9": crb
+  "10": crb
 ```
 
 ## [Requirements](#requirements)
@@ -47,22 +44,19 @@ repository_powertools_repo_file:
 
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://mullholland.net) for further information.
 
-Here is an overview of related roles:
-![dependencies](https://raw.githubusercontent.com/mullholland/ansible-role-repository_powertools/png/requirements.png "Dependencies")
-
 ## [Compatibility](#compatibility)
 
 This role has been tested on these [container images](https://hub.docker.com/u/mullholland):
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|8|
+|[EL](https://hub.docker.com/r/mullholland/enterpriselinux)|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
+- The version before the previous version.
 - The previous version.
 - The current version.
-- The development version.
 
 If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-repository_powertools/issues).
 

@@ -2,5 +2,5 @@
 - name: Check OS version
   ansible.builtin.include_tasks: powertools.yml
   when:
-    - ansible_distribution in [ "CentOS", "Rocky", "AlmaLinux" ]
-    - ansible_distribution_major_version == "8"
+    - ansible_facts['distribution'] in ["CentOS", "Rocky", "AlmaLinux"]
+    - ansible_facts['distribution_major_version'] in ["8", "9", "10"]

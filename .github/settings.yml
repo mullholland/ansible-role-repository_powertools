@@ -3,6 +3,6 @@
 # Ansible managed
 #
 repository:
-  description: description
+  description: Enables the PowerTools/CodeReady Builder (CRB) repository on CentOS Stream, Rocky Linux and AlmaLinux
   homepage: https://mullholland.net
-  topics: development, packaging, system, ansible, molecule, tox, playbook
+  topics: development, packaging, system, ansible, molecule, playbook

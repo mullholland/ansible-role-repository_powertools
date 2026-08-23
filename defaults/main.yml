@@ -1,10 +1,8 @@
 ---
-repository_powertools_repo_file:
-  EL:
-    "8": "CentOS-Stream-PowerTools.repo"
-  CentOS:
-    "8": "CentOS-Stream-PowerTools.repo"
-  Rocky:
-    "8": "Rocky-PowerTools.repo"
-  AlmaLinux:
-    "8": "almalinux-powertools.repo"
+# dnf repo id that provides the PowerTools/CodeReady Builder repository,
+# keyed by distribution_major_version. Renamed from "powertools" to "crb"
+# starting with EL9 across CentOS Stream, Rocky Linux and AlmaLinux.
+repository_powertools_repo_id:
+  "8": powertools
+  "9": crb
+  "10": crb

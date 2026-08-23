@@ -3,20 +3,15 @@ galaxy_info:
   author: Mullholland
   namespace: mullholland
   role_name: repository_powertools
-  description: description
+  description: Enables the PowerTools/CodeReady Builder (CRB) repository on CentOS Stream, Rocky Linux and AlmaLinux
   license: MIT
   company: none
   min_ansible_version: "2.10"
 
-  #
-  # Below are all platforms currently available. Just uncomment
-  # the ones that apply to your role. If you don't see your
-  # platform on this list, let us know and we'll get it added!
-  #
   platforms:
     - name: EL
       versions:
-        - "8"
+        - all
   galaxy_tags:
     - development
     - packaging

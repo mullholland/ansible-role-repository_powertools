@@ -15,7 +15,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   hosts: all
   gather_facts: true
   roles:
-    - role: "mullholland.repository_powertools"
+    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') }}"
 ```
 
 
